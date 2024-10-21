@@ -1,4 +1,6 @@
 /* eslint-disable no-unused-vars */
+const { addNoteHandler } = require('./handler');
+
 const routes = [
   {
     method: 'GET',
@@ -48,6 +50,11 @@ const routes = [
     handler: (request, h) => {
       return 'Halaman tidak ditemukan';
     },
+  },
+  {
+    method: 'POST',
+    path: '/notes',
+    handler: addNoteHandler,
   },
 ];
 
